@@ -10,10 +10,14 @@ $heading: "Source Sans Pro", sans-serif;
   font-size: 26px;
   display: flex;
   justify-content: space-between;
-  margin: 25px 25px 0 25px;
+  align-items: center;
+  margin: 19px 25px 0 25px;
+  position: sticky;
+  top: 0;
   &__list {
     display: flex;
     list-style: none;
+    align-items: center;
   }
   &__item {
     margin-left: 25px;
@@ -26,6 +30,12 @@ $heading: "Source Sans Pro", sans-serif;
     display: flex;
     &__text {
       margin-left: 5px;
+    }
+  }
+  &__social {
+    &__link {
+      margin: 18px;
+      text-decoration: none;
     }
   }
 }
