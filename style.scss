@@ -1,5 +1,31 @@
 $heading: "Source Sans Pro", sans-serif;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-h1 {
+.navbar {
   font-family: $heading;
+  font-size: 26px;
+  display: flex;
+  justify-content: space-between;
+  margin: 25px 25px 0 25px;
+  &__list {
+    display: flex;
+    list-style: none;
+  }
+  &__item {
+    margin-left: 25px;
+    a {
+      color: black;
+      text-decoration: none;
+    }
+  }
+  &__number {
+    display: flex;
+    &__text {
+      margin-left: 5px;
+    }
+  }
 }
