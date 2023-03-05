@@ -1,4 +1,11 @@
 $heading: "Source Sans Pro", sans-serif;
+$header-color: #e5e5e5;
+$main-tx-color: #000;
+$secondary-tx-color: #463f3f;
+$btn-color: #f9c92c;
+$hover-btn-color: #fcd65c;
+$active-btn-color: #fdc302;
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,14 +13,14 @@ $heading: "Source Sans Pro", sans-serif;
 }
 
 .navbar {
+  background-color: $header-color;
   font-family: $heading;
   font-size: 26px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 19px 25px 0 25px;
-  position: sticky;
-  top: 0;
+  padding: 19px 25px 0 25px;
+
   &__list {
     display: flex;
     list-style: none;
@@ -37,5 +44,72 @@ $heading: "Source Sans Pro", sans-serif;
       margin: 18px;
       text-decoration: none;
     }
+  }
+}
+
+.hero {
+  background-color: $header-color;
+  display: flex;
+  font-family: $heading;
+  padding: 0 0 118px 0;
+  &__article {
+    margin: auto;
+    width: 552px;
+    &__title {
+      margin-bottom: 6px;
+      font-size: 76px;
+      font-weight: 600;
+      line-height: 85px;
+      letter-spacing: 0.02em;
+    }
+    &__paragraph {
+      font-size: 20px;
+      color: $secondary-tx-color;
+      line-height: 25px;
+      margin-bottom: 40px;
+    }
+    .booking__btn {
+      background-color: $btn-color;
+      width: 301px;
+      height: 49px;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 25px;
+      border: none;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $hover-btn-color;
+        transition: 0.25s;
+      }
+
+      &:active {
+        background-color: $active-btn-color;
+      }
+    }
+    &__char {
+      display: flex;
+      .character {
+        margin-right: 18px;
+        .char__title {
+          font-weight: 600;
+          font-size: 40px;
+          line-height: 85px;
+        }
+        .char_desc {
+          margin: auto;
+          font-size: 14px;
+          line-height: 18px;
+        }
+      }
+    }
+  }
+
+  &__image {
+    width: 279px;
+    height: 562px;
+    background-image: url(./public/hero_img_1.png);
+    margin-right: 59px;
+    background-size: cover;
   }
 }
