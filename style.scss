@@ -113,3 +113,29 @@ $active-btn-color: #fdc302;
     background-size: cover;
   }
 }
+
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__text {
+    width: 550px;
+    margin-right: 240px;
+    &__title {
+      font-weight: 600;
+      font-size: 76px;
+      line-height: 85px;
+    }
+    &__desc {
+      color: $secondary-tx-color;
+      font-size: 20px;
+      line-height: 25px;
+    }
+  }
+  &__image {
+    width: 540px;
+    height: 545px;
+    background-image: url(/public/about_img.png);
+    background-size: cover;
+  }
+}
