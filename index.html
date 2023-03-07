@@ -4,12 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.scss" />
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400;600&display=swap"
-      rel="stylesheet"
-    /> -->
 
     <title>Piter Roof</title>
   </head>
@@ -226,7 +220,9 @@
     <div id="about" class="about">
       <div class="about__text">
         <p class="about__text__title">
-          Уже более 6 лет мы делаем людей счастливыми
+          Уже более <br />
+          6 лет мы <br />
+          делаем людей счастливыми
         </p>
         <p class="about__text__desc">
           Мы работаем с 2012 года и организовываем классные экскурсии. Мы
@@ -239,9 +235,30 @@
           организовываем классные экскурсии.
         </p>
       </div>
-      <div class="about__image"></div>
+      <div class="about__image">
+        <div class="frame"></div>
+      </div>
     </div>
 
+    <div class="excursions" id="excursions">
+      <p class="excursions__title">Экскурсии</p>
+      <div class="excursions__buttons">
+        <div class="form_radio_btn">
+          <input id="radio-1" type="radio" name="radio" value="1" checked />
+          <label for="radio-1">Все</label>
+        </div>
+
+        <div class="form_radio_btn">
+          <input id="radio-2" type="radio" name="radio" value="2" />
+          <label for="radio-2">Индивидуальные</label>
+        </div>
+
+        <div class="form_radio_btn">
+          <input id="radio-3" type="radio" name="radio" value="3" />
+          <label for="radio-3">Групповые</label>
+        </div>
+      </div>
+    </div>
     <script type="module" src="/main.js"></script>
   </body>
 </html>
