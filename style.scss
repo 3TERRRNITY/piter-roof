@@ -197,18 +197,12 @@ $active-btn-color: #fdc302;
       border-radius: 15px;
       user-select: none;
     }
-
-    /* Checked */
     .form_radio_btn input[type="radio"]:checked + label {
       background: $btn-color;
     }
-
-    /* Hover */
     .form_radio_btn label:hover {
       color: #666;
     }
-
-    /* Disabled */
     .form_radio_btn input[type="radio"]:disabled + label {
       background: #efefef;
       color: #666;
