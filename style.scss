@@ -2,6 +2,7 @@
 
 $heading: "Source Serif Pro", serif;
 $header-color: #e5e5e5;
+$border-color: #e3e3e3;
 $main-tx-color: #000;
 $secondary-tx-color: #463f3f;
 $btn-color: #f9c92c;
@@ -12,6 +13,7 @@ $active-btn-color: #fdc302;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+
   font-family: $heading;
 }
 
@@ -120,9 +122,10 @@ $active-btn-color: #fdc302;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  overflow: hidden;
   &__text {
-    margin: 80px 104px;
-    width: 552px;
+    margin: 80px 241px 100px 100px;
+    width: 600px;
     &__title {
       font-weight: 600;
       font-size: 76px;
@@ -136,10 +139,79 @@ $active-btn-color: #fdc302;
     }
   }
   &__image {
-    width: 963px;
-    height: 545px;
+    position: relative;
+    width: 600px;
+    height: 541px;
     background-image: url(/public/about_img.png);
     background-size: cover;
-    margin-top: 149px;
+    margin: 130px 0;
+    .frame {
+      z-index: 10;
+      background: rgba(0, 0, 0, 0);
+      border: 20px solid $border-color;
+      position: absolute;
+      left: 100px;
+      top: -100px;
+      height: 731px;
+      width: 731px;
+    }
+  }
+}
+
+.excursions {
+  display: flex;
+  flex-direction: column;
+  margin-left: 88px;
+  &__title {
+    font-weight: 600;
+    font-size: 76px;
+    line-height: 85px;
+    margin-bottom: 35px;
+
+    letter-spacing: 0.02em;
+  }
+  &__buttons {
+    display: flex;
+    font-size: 26px;
+    line-height: 33px;
+    color: #000;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+
+    .form_radio_btn {
+      display: inline-block;
+      margin-right: 10px;
+    }
+    .form_radio_btn input[type="radio"] {
+      display: none;
+    }
+    .form_radio_btn label {
+      display: inline-block;
+      cursor: pointer;
+      padding: 10px 20px;
+      line-height: 34px;
+      border: 1px solid #999;
+      border-radius: 15px;
+      user-select: none;
+    }
+
+    /* Checked */
+    .form_radio_btn input[type="radio"]:checked + label {
+      background: $btn-color;
+    }
+
+    /* Hover */
+    .form_radio_btn label:hover {
+      color: #666;
+    }
+
+    /* Disabled */
+    .form_radio_btn input[type="radio"]:disabled + label {
+      background: #efefef;
+      color: #666;
+    }
   }
 }
