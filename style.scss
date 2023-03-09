@@ -208,4 +208,23 @@ $active-btn-color: #fdc302;
       color: #666;
     }
   }
+  .block-cover {
+    margin: 65px 0 150px 0;
+    display: grid;
+    grid-template-columns: 400px 400px 400px;
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+
+    .box {
+      height: 470px;
+      border: 1px solid #000;
+      &__text {
+        display: flex;
+        justify-content: center;
+      }
+    }
+    .hide {
+      display: none;
+    }
+  }
 }
