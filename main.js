@@ -10,3 +10,18 @@ for (let anchor of anchors) {
     });
   });
 }
+
+const filterExcursions = document.querySelectorAll(".box");
+
+document.getElementById("excursions").addEventListener("click", (event) => {
+  if (event.target.tagName !== "INPUT") return false;
+
+  let filterClass = event.target.dataset["f"];
+
+  filterExcursions.forEach((elem) => {
+    elem.classList.remove("hide");
+    if (!elem.classList.contains(filterClass) && filterClass !== "all") {
+      elem.classList.add("hide");
+    }
+  });
+});

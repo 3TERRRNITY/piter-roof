@@ -142,11 +142,7 @@
         </a>
         <li class="navbar__item"><a href="#about">О нас</a></li>
         <li class="navbar__item">
-          <a
-            href="#
-          excursions"
-            >Экскурсии</a
-          >
+          <a href="#excursions">Экскурсии</a>
         </li>
         <li class="navbar__item"><a href="#gallery">Галерея</a></li>
         <li class="navbar__item"><a href="#FAQ">FAQ</a></li>
@@ -252,21 +248,85 @@
       <p class="excursions__title">Экскурсии</p>
       <div class="excursions__buttons">
         <div class="form_radio_btn">
-          <input id="radio-1" type="radio" name="radio" value="1" checked />
-          <label for="radio-1">Все</label>
+          <input
+            data-f="all"
+            id="all"
+            type="radio"
+            name="radio"
+            value="1"
+            checked
+          />
+          <label for="all">Все</label>
         </div>
 
         <div class="form_radio_btn">
-          <input id="radio-2" type="radio" name="radio" value="2" />
-          <label for="radio-2">Индивидуальные</label>
+          <input
+            data-f="individual"
+            id="individual"
+            type="radio"
+            name="radio"
+            value="2"
+          />
+          <label for="individual">Индивидуальные</label>
         </div>
 
         <div class="form_radio_btn">
-          <input id="radio-3" type="radio" name="radio" value="3" />
-          <label for="radio-3">Групповые</label>
+          <input
+            data-f="group"
+            id="group"
+            type="radio"
+            name="radio"
+            value="3"
+          />
+          <label for="group">Групповые</label>
+        </div>
+      </div>
+      <div class="block-cover">
+        <div class="col-auto box group">
+          <img src="./public/excursion_img.png" alt="" class="box__image" />
+          <div class="box__text">
+            <p class="box__text__title"></p>
+            <div class="box__text__category">
+              <p class="box__text__category__time">1 час</p>
+              <p class="box__text__category__group">Групповая (до 20 чел)</p>
+            </div>
+            <div class="box__text__book">
+              <p class="box__text__book__price">1 400 ₽</p>
+              <button class="box__text__book__btn">Забронировать</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-auto box individual">
+          <img src="./public/excursion_img.png" alt="" class="box__image" />
+          <div class="box__text">
+            <p class="box__text__title"></p>
+            <div class="box__text__category">
+              <p class="box__text__category__time">1 час</p>
+              <p class="box__text__category__group">Индивидуальная</p>
+            </div>
+            <div class="box__text__book">
+              <p class="box__text__book__price">1 400 ₽</p>
+              <button class="box__text__book__btn">Забронировать</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-auto box group">
+          <img src="./public/excursion_img.png" alt="" class="box__image" />
+          <div class="box__text">
+            <p class="box__text__title"></p>
+            <div class="box__text__category">
+              <p class="box__text__category__time">1 час</p>
+              <p class="box__text__category__group">Групповая (до 20 чел)</p>
+            </div>
+            <div class="box__text__book">
+              <p class="box__text__book__price">1 400 ₽</p>
+              <button class="box__text__book__btn">Забронировать</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <script type="module" src="/main.js"></script>
+
+    <script src="/main.js"></script>
   </body>
 </html>
