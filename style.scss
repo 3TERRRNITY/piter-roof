@@ -209,7 +209,7 @@ $active-btn-color: #fdc302;
     }
   }
   .block-cover {
-    margin: 65px 0 150px 0;
+    margin: 65px auto 150px auto;
     display: grid;
     grid-template-columns: 400px 400px 400px;
     grid-column-gap: 30px;
@@ -218,11 +218,50 @@ $active-btn-color: #fdc302;
     .box {
       height: 470px;
       border: 1px solid #000;
+
       &__text {
         display: flex;
+        flex-direction: column;
         justify-content: center;
+        padding: 14px;
+        &__title {
+          font-weight: 600;
+          font-size: 26px;
+          letter-spacing: 0.02em;
+          margin-bottom: 10px;
+        }
+        &__category {
+          display: flex;
+          justify-content: space-between;
+          font-size: 18px;
+          line-height: 23px;
+          display: flex;
+          align-items: center;
+          letter-spacing: 0.05em;
+          margin-bottom: 45px;
+        }
+
+        &__book {
+          display: flex;
+          justify-content: space-between;
+          font-weight: 600;
+          font-size: 33px;
+          letter-spacing: 0.02em;
+
+          &__btn {
+            background-color: $btn-color;
+            width: 205px;
+            height: 40px;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 25px;
+            border: none;
+            cursor: pointer;
+          }
+        }
       }
     }
+
     .hide {
       display: none;
     }
