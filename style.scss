@@ -211,7 +211,7 @@ $active-btn-color: #fdc302;
   .block-cover {
     margin: 65px auto 150px auto;
     display: grid;
-    grid-template-columns: 400px 400px 400px;
+    grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 30px;
     grid-row-gap: 30px;
 
@@ -257,6 +257,15 @@ $active-btn-color: #fdc302;
             line-height: 25px;
             border: none;
             cursor: pointer;
+
+            &:hover {
+              background-color: $hover-btn-color;
+              transition: 0.25s;
+            }
+
+            &:active {
+              background-color: $active-btn-color;
+            }
           }
         }
       }
@@ -264,6 +273,44 @@ $active-btn-color: #fdc302;
 
     .hide {
       display: none;
+    }
+  }
+}
+.gallery {
+  &__title {
+    width: 600px;
+
+    font-weight: 600;
+    font-size: 76px;
+    line-height: 85px;
+    letter-spacing: 0.02em;
+
+    margin: 0 0 30px 88px;
+  }
+  .grid_container {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 300px 300px 300px;
+
+    .image {
+      background-size: cover;
+      background-repeat: no-repeat;
+      &_1 {
+        grid-row: 1/4;
+        background-image: url(/public/photoblock_img_1.png);
+      }
+      &_2 {
+        background-image: url(/public/photoblock_img_2.png);
+        margin-right: 20px;
+      }
+      &_3 {
+        background-image: url(/public/photoblock_img_3.png);
+        margin-right: 20px;
+      }
+      &_4 {
+        background-image: url(/public/photoblock_img_4.png);
+        margin-right: 20px;
+      }
     }
   }
 }
