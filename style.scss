@@ -316,11 +316,35 @@ $active-btn-color: #fdc302;
 }
 
 .faq {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  margin-top: 65px;
+  margin-left: 95px;
+
+  &__picture1 {
+    background-image: url(./public/FAQ-1.png);
+    z-index: -1;
+    background-size: cover;
+    position: absolute;
+    left: 0;
+    width: 381px;
+    height: 381px;
+    @media screen and (width<950px) {
+      display: none;
+    }
+  }
+  &__picture2 {
+    background-image: url(./public/FAQ-2.png);
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    bottom: -1;
+    width: 533px;
+    height: 533px;
+  }
+
   &__title {
+    width: 771px;
+    height: 182px;
+
     font-weight: 600;
     font-size: 76px;
     line-height: 85px;
@@ -331,10 +355,14 @@ $active-btn-color: #fdc302;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    user-select: none;
     box-sizing: border-box;
     list-style: none;
     padding: 0;
+
+    li {
+      margin-bottom: 15px;
+    }
 
     .toggle-header {
       font-weight: 600;
@@ -343,25 +371,26 @@ $active-btn-color: #fdc302;
       border: 3px solid #aeaeae;
       width: 737px;
       height: 78px;
+      padding: 30px;
       display: flex;
       justify-content: space-between;
       align-items: center;
       cursor: pointer;
-      i {
-        svg {
-          align-items: center;
-        }
+      background: #ffffff;
+
+      .toggle-icon {
+        margin-top: 30px;
       }
     }
     .toggle-content {
       background: #ffffff;
       border: 1px solid #aeaeae;
-      width: 100%;
+      width: 737px;
       display: none;
       font-size: 24px;
       line-height: 30px;
       letter-spacing: 0.02em;
-
+      padding: 30px;
       p {
         display: flex;
         align-items: center;
