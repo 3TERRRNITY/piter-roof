@@ -1,4 +1,5 @@
 const anchors = document.querySelectorAll('a[href*="#"]');
+const toggleHeaders = document.querySelectorAll(".toggle-header");
 
 for (let anchor of anchors) {
   anchor.addEventListener("click", function (e) {
@@ -22,6 +23,21 @@ document.getElementById("excursions").addEventListener("click", (event) => {
     elem.classList.remove("hide");
     if (!elem.classList.contains(filterClass) && filterClass !== "all") {
       elem.classList.add("hide");
+    }
+  });
+});
+
+toggleHeaders.forEach((header) => {
+  header.addEventListener("click", () => {
+    const toggleContent = header.nextElementSibling;
+
+    header.querySelector(".toggle-icon").classList.toggle("fa-chevron-right");
+    header.querySelector(".toggle-icon").classList.toggle("fa-chevron-down");
+
+    if (toggleContent.style.display === "block") {
+      toggleContent.style.display = "none";
+    } else {
+      toggleContent.style.display = "block";
     }
   });
 });
