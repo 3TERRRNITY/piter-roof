@@ -1,5 +1,6 @@
 const anchors = document.querySelectorAll('a[href*="#"]');
 const toggleHeaders = document.querySelectorAll(".toggle-header");
+const form = document.getElementById("excursion-form");
 
 for (let anchor of anchors) {
   anchor.addEventListener("click", function (e) {
@@ -40,4 +41,15 @@ toggleHeaders.forEach((header) => {
       toggleContent.style.display = "block";
     }
   });
+});
+
+form.addEventListener("submit", function (event) {
+  event.preventDefault();
+  const date = form.elements["date"].value;
+  const category = form.elements["category"].value;
+  const name = form.elements["name"].value;
+  const phone = form.elements["phone"].value;
+  console.log(
+    `Дата: ${date}, Категория: ${category}, Имя: ${name}, Телефон: ${phone}`
+  );
 });
