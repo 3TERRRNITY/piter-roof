@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Забронировать экскурсию</title>
+  </head>
+  <body>
+    <form class="excursion-form" id="excursion-form">
+      <div class="date">
+        <label for="date">Дата:</label>
+        <input type="date" id="date" name="date" />
+      </div>
+      <div class="category">
+        <label for="category">Категория экскурсии:</label>
+        <select id="category" name="category">
+          <option value="historical">Историческая</option>
+          <option value="nature">Природная</option>
+          <option value="culinary">Кулинарная</option>
+          <option value="adventure">Приключенческая</option>
+        </select>
+      </div>
+      <div class="name">
+        <label for="name">Имя:</label>
+        <input type="text" id="name" name="name" />
+      </div>
+
+      <div class="phone">
+        <label for="phone">Телефон:</label>
+        <input type="tel" id="phone" name="phone" />
+      </div>
+
+      <button type="submit">Забронировать экскурсию</button>
+    </form>
+
+    <script src="/main.js"></script>
+  </body>
+</html>
