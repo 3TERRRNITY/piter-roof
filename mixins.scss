@@ -1,0 +1,54 @@
+@mixin inputArea {
+  width: 500px;
+  height: 50px;
+  font-size: 24px;
+  line-height: 30px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.02em;
+  text-indent: 15px;
+
+  color: #282626;
+}
+@mixin formElement {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+  label {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: 0.02em;
+    margin-bottom: 10px;
+  }
+  input {
+    @include inputArea;
+  }
+  select {
+    @include inputArea;
+  }
+}
+
+@mixin btn {
+  background-color: $btn-color;
+  width: 301px;
+  height: 49px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 25px;
+  border: none;
+  cursor: pointer;
+  a {
+    text-decoration: none;
+    color: #000;
+  }
+
+  &:hover {
+    background-color: $hover-btn-color;
+    transition: 0.25s;
+  }
+
+  &:active {
+    background-color: $active-btn-color;
+  }
+}
