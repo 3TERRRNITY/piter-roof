@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400;600&display=swap");
-
+@import "mixins.scss";
 $heading: "Source Serif Pro", serif;
 $header-color: #e5e5e5;
 $border-color: #e3e3e3;
@@ -73,27 +73,7 @@ $active-btn-color: #fdc302;
       margin-bottom: 40px;
     }
     .booking__btn {
-      background-color: $btn-color;
-      width: 301px;
-      height: 49px;
-      font-weight: 600;
-      font-size: 20px;
-      line-height: 25px;
-      border: none;
-      cursor: pointer;
-      a {
-        text-decoration: none;
-        color: #000;
-      }
-
-      &:hover {
-        background-color: $hover-btn-color;
-        transition: 0.25s;
-      }
-
-      &:active {
-        background-color: $active-btn-color;
-      }
+      @include btn;
     }
     &__char {
       display: flex;
