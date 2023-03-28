@@ -386,3 +386,84 @@ $active-btn-color: #fdc302;
     }
   }
 }
+
+.contacts {
+  display: flex;
+  margin-top: 115px;
+  padding-left: 130px;
+
+  &__information {
+    font-size: 30px;
+    line-height: 85px;
+
+    letter-spacing: 0.02em;
+    .information__title {
+      font-weight: 600;
+      font-size: 76px;
+      line-height: 85px;
+
+      letter-spacing: 0.02em;
+    }
+    .information__phone,
+    .information__mail {
+      display: flex;
+      align-items: center;
+      &__text {
+        margin-left: 5px;
+      }
+    }
+    .information__whatsup,
+    .information__telegram {
+      &__text {
+        background-color: #fff;
+
+        width: 420px;
+        height: 60px;
+        padding: 0 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        a {
+          color: #000;
+          text-decoration: none;
+          font-size: 24px;
+          line-height: 85px;
+
+          letter-spacing: 0.02em;
+        }
+      }
+    }
+    .information__whatsup {
+      margin: 70px 0 16px 0;
+    }
+    .information__telegram {
+      margin-bottom: 110px;
+    }
+  }
+  .images {
+    display: flex;
+    margin-left: 130px;
+    margin-bottom: 25px;
+    .contacts__image {
+      width: 215px;
+      height: 440px;
+
+      background-image: url(/public/hero_img_1.png);
+      background-size: cover;
+    }
+    .image1 {
+      position: relative;
+      top: 30px;
+    }
+    .image2 {
+      position: relative;
+      top: 60px;
+      left: 50px;
+    }
+    .image3 {
+      position: relative;
+      left: 100px;
+      top: 90px;
+    }
+  }
+}
