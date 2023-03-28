@@ -52,3 +52,11 @@
     background-color: $active-btn-color;
   }
 }
+
+@mixin bold-text {
+  font-weight: 600;
+  font-size: 55px;
+  line-height: 85px;
+
+  letter-spacing: 0.02em;
+}

@@ -61,10 +61,7 @@ $active-btn-color: #fdc302;
     width: 552px;
     &__title {
       margin-bottom: 6px;
-      font-size: 76px;
-      font-weight: 600;
-      line-height: 85px;
-      letter-spacing: 0.02em;
+      @include bold-text;
     }
     &__paragraph {
       font-size: 20px;
@@ -111,10 +108,7 @@ $active-btn-color: #fdc302;
     margin: 80px 241px 100px 100px;
     width: 600px;
     &__title {
-      font-weight: 600;
-      font-size: 76px;
-      line-height: 85px;
-      letter-spacing: 0.02em;
+      @include bold-text;
     }
     &__desc {
       color: $secondary-tx-color;
@@ -147,12 +141,8 @@ $active-btn-color: #fdc302;
   flex-direction: column;
   margin-left: 88px;
   &__title {
-    font-weight: 600;
-    font-size: 76px;
-    line-height: 85px;
+    @include bold-text;
     margin-bottom: 35px;
-
-    letter-spacing: 0.02em;
   }
   &__buttons {
     display: flex;
@@ -267,10 +257,7 @@ $active-btn-color: #fdc302;
   &__title {
     width: 600px;
 
-    font-weight: 600;
-    font-size: 76px;
-    line-height: 85px;
-    letter-spacing: 0.02em;
+    @include bold-text;
 
     margin: 0 0 30px 88px;
   }
@@ -332,10 +319,7 @@ $active-btn-color: #fdc302;
     width: 771px;
     height: 182px;
 
-    font-weight: 600;
-    font-size: 76px;
-    line-height: 85px;
-    letter-spacing: 0.02em;
+    @include bold-text;
   }
   .toggle-list {
     display: flex;
@@ -384,5 +368,92 @@ $active-btn-color: #fdc302;
         margin: auto;
       }
     }
+  }
+}
+
+.contacts {
+  display: flex;
+  margin-top: 115px;
+  padding-left: 130px;
+
+  &__information {
+    font-size: 30px;
+    line-height: 85px;
+
+    letter-spacing: 0.02em;
+    .information__title {
+      @include bold-text;
+    }
+    .information__phone,
+    .information__mail {
+      display: flex;
+      align-items: center;
+      &__text {
+        margin-left: 5px;
+      }
+    }
+    .information__whatsup,
+    .information__telegram {
+      &__text {
+        background-color: #fff;
+
+        width: 420px;
+        height: 60px;
+        padding: 0 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        a {
+          color: #000;
+          text-decoration: none;
+          font-size: 24px;
+          line-height: 85px;
+
+          letter-spacing: 0.02em;
+        }
+      }
+    }
+    .information__whatsup {
+      margin: 70px 0 16px 0;
+    }
+    .information__telegram {
+      margin-bottom: 110px;
+    }
+  }
+  .images {
+    display: flex;
+    margin-left: 130px;
+    margin-bottom: 25px;
+    .contacts__image {
+      width: 215px;
+      height: 440px;
+
+      background-image: url(/public/hero_img_1.png);
+      background-size: cover;
+    }
+    .image1 {
+      position: relative;
+      top: 30px;
+    }
+    .image2 {
+      position: relative;
+      top: 60px;
+      left: 50px;
+    }
+    .image3 {
+      position: relative;
+      left: 100px;
+      top: 90px;
+    }
+  }
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  margin-left: 75px;
+  &__title {
+    margin-right: 6px;
+    @include bold-text;
   }
 }
