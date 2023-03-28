@@ -61,10 +61,7 @@ $active-btn-color: #fdc302;
     width: 552px;
     &__title {
       margin-bottom: 6px;
-      font-size: 76px;
-      font-weight: 600;
-      line-height: 85px;
-      letter-spacing: 0.02em;
+      @include bold-text;
     }
     &__paragraph {
       font-size: 20px;
@@ -111,10 +108,7 @@ $active-btn-color: #fdc302;
     margin: 80px 241px 100px 100px;
     width: 600px;
     &__title {
-      font-weight: 600;
-      font-size: 76px;
-      line-height: 85px;
-      letter-spacing: 0.02em;
+      @include bold-text;
     }
     &__desc {
       color: $secondary-tx-color;
@@ -147,12 +141,8 @@ $active-btn-color: #fdc302;
   flex-direction: column;
   margin-left: 88px;
   &__title {
-    font-weight: 600;
-    font-size: 76px;
-    line-height: 85px;
+    @include bold-text;
     margin-bottom: 35px;
-
-    letter-spacing: 0.02em;
   }
   &__buttons {
     display: flex;
@@ -267,10 +257,7 @@ $active-btn-color: #fdc302;
   &__title {
     width: 600px;
 
-    font-weight: 600;
-    font-size: 76px;
-    line-height: 85px;
-    letter-spacing: 0.02em;
+    @include bold-text;
 
     margin: 0 0 30px 88px;
   }
@@ -332,10 +319,7 @@ $active-btn-color: #fdc302;
     width: 771px;
     height: 182px;
 
-    font-weight: 600;
-    font-size: 76px;
-    line-height: 85px;
-    letter-spacing: 0.02em;
+    @include bold-text;
   }
   .toggle-list {
     display: flex;
@@ -398,11 +382,7 @@ $active-btn-color: #fdc302;
 
     letter-spacing: 0.02em;
     .information__title {
-      font-weight: 600;
-      font-size: 76px;
-      line-height: 85px;
-
-      letter-spacing: 0.02em;
+      @include bold-text;
     }
     .information__phone,
     .information__mail {
@@ -465,5 +445,15 @@ $active-btn-color: #fdc302;
       left: 100px;
       top: 90px;
     }
+  }
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  margin-left: 75px;
+  &__title {
+    margin-right: 6px;
+    @include bold-text;
   }
 }
