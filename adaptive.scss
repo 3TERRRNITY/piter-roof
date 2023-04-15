@@ -81,4 +81,60 @@
       display: none;
     }
   }
+
+  .excursions {
+    margin-left: 0;
+    &__title {
+      margin-bottom: 20px;
+      font-size: 42px;
+      line-height: 49px;
+    }
+    &__buttons {
+      width: 100vw;
+      font-size: 24px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .block-cover {
+      flex-direction: column;
+      margin-top: 45px;
+      margin-bottom: 120px;
+      .box {
+        margin-right: 0;
+      }
+    }
+  }
+  .gallery {
+    margin-bottom: 115px;
+    &__title {
+      overflow: hidden;
+      margin: 10px 20px;
+      width: 370px;
+      font-size: 42px;
+      line-height: 49px;
+    }
+    .grid_container {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 300px 100px;
+      grid-template-areas:
+        "big big big"
+        "small small small";
+
+      .image_1 {
+        grid-area: big;
+      }
+      .small_images {
+        grid-area: small;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 100px;
+        gap: 20px;
+        .image_2,
+        .image_3,
+        .image_4 {
+          margin: 0;
+        }
+      }
+    }
+  }
 }
