@@ -84,10 +84,12 @@
 
   .excursions {
     margin-left: 0;
+
     &__title {
       margin-bottom: 20px;
       font-size: 42px;
       line-height: 49px;
+      overflow: hidden;
     }
     &__buttons {
       width: 100vw;
@@ -135,6 +137,71 @@
           margin: 0;
         }
       }
+    }
+  }
+  .faq {
+    margin: 0 auto;
+    &__title {
+      width: 370px;
+      font-size: 42px;
+      line-height: 49px;
+    }
+    &__picture1 {
+      display: none;
+    }
+    &__picture2 {
+      width: 100vw;
+      background-size: cover;
+    }
+    .toggle-list {
+      margin: 0 auto;
+      .toggle-header {
+        width: 380px;
+        overflow: hidden;
+        font-size: 24px;
+      }
+      .toggle-content {
+        width: 380px;
+      }
+    }
+  }
+  .contacts {
+    padding: 0;
+    .images {
+      display: none;
+    }
+    .information__title {
+      overflow: hidden;
+      font-size: 42px;
+      line-height: 49px;
+    }
+    .information__phone,
+    .information__mail {
+      font-size: 25px;
+      line-height: 85px;
+    }
+    .information__whatsup,
+    .information__telegram {
+      width: 390px;
+      display: flex;
+      justify-content: center;
+
+      &__text {
+        width: 340px;
+        padding: 0;
+        overflow: hidden;
+        a {
+          font-size: 23px;
+        }
+      }
+    }
+  }
+  .footer {
+    margin-left: 0;
+    &__title {
+      font-size: 30px;
+      line-height: 35px;
+      overflow: hidden;
     }
   }
 }

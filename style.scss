@@ -318,9 +318,6 @@ $active-btn-color: #fdc302;
     left: 0;
     width: 381px;
     height: 381px;
-    @media screen and (width<950px) {
-      display: none;
-    }
   }
   &__picture2 {
     background-image: url(./public/FAQ-2.png);
@@ -354,6 +351,7 @@ $active-btn-color: #fdc302;
 
     .toggle-header {
       font-weight: 600;
+      overflow: hidden;
       font-size: 30px;
       line-height: 85px;
       border: 3px solid #aeaeae;
@@ -390,6 +388,7 @@ $active-btn-color: #fdc302;
 
 .contacts {
   display: flex;
+
   margin-top: 115px;
   padding-left: 130px;
 
@@ -413,6 +412,7 @@ $active-btn-color: #fdc302;
     .information__telegram {
       &__text {
         background-color: #fff;
+        overflow: hidden;
 
         width: 420px;
         height: 60px;
