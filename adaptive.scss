@@ -1,0 +1,207 @@
+@media screen and (max-width: 1025px) {
+  .navbar {
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+    .logo {
+      g {
+        rect {
+          fill: rgba($color: #000000, $alpha: 0);
+        }
+        path {
+          fill: #fff;
+        }
+        line {
+          stroke: #fff;
+        }
+        g {
+          line {
+            stroke: #fff;
+          }
+        }
+      }
+    }
+    &__item,
+    &__social {
+      display: none;
+    }
+    &__number {
+      justify-self: end;
+      font-size: 22px;
+    }
+  }
+  .hero {
+    background-image: url("./public/hero_img_1.png");
+    background-size: cover;
+
+    width: 100vw;
+    top: 0;
+    height: 670px;
+    color: white;
+    overflow: hidden;
+
+    &__article__title {
+      width: 320px;
+      font-size: 52px;
+      line-height: 65px;
+      letter-spacing: 0.05em;
+      margin: 315px auto 0 auto;
+    }
+
+    .booking__btn {
+      margin: 50px auto;
+    }
+    &__article__paragraph,
+    &__image,
+    &__article__char {
+      display: none;
+    }
+  }
+
+  .about {
+    &__text {
+      margin: 25px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      &__title {
+        font-size: 42px;
+        line-height: 49px;
+        letter-spacing: 0.02em;
+        overflow: hidden;
+      }
+      &__desc {
+        font-size: 20px;
+        line-height: 25px;
+      }
+    }
+    &__image {
+      display: none;
+    }
+  }
+
+  .excursions {
+    margin-left: 0;
+
+    &__title {
+      margin-bottom: 20px;
+      font-size: 42px;
+      line-height: 49px;
+      overflow: hidden;
+    }
+    &__buttons {
+      width: 100vw;
+      font-size: 24px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .block-cover {
+      flex-direction: column;
+      margin-top: 45px;
+      margin-bottom: 120px;
+      .box {
+        margin-right: 0;
+      }
+    }
+  }
+  .gallery {
+    margin-bottom: 115px;
+    &__title {
+      overflow: hidden;
+      margin: 10px 20px;
+      width: 370px;
+      font-size: 42px;
+      line-height: 49px;
+    }
+    .grid_container {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 300px 100px;
+      grid-template-areas:
+        "big big big"
+        "small small small";
+
+      .image_1 {
+        grid-area: big;
+      }
+      .small_images {
+        grid-area: small;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 100px;
+        gap: 20px;
+        .image_2,
+        .image_3,
+        .image_4 {
+          margin: 0;
+        }
+      }
+    }
+  }
+  .faq {
+    margin: 0 auto;
+    &__title {
+      width: 370px;
+      font-size: 42px;
+      line-height: 49px;
+    }
+    &__picture1 {
+      display: none;
+    }
+    &__picture2 {
+      width: 100vw;
+      background-size: cover;
+    }
+    .toggle-list {
+      margin: 0 auto;
+      .toggle-header {
+        width: 380px;
+        overflow: hidden;
+        font-size: 24px;
+      }
+      .toggle-content {
+        width: 380px;
+      }
+    }
+  }
+  .contacts {
+    padding: 0;
+    .images {
+      display: none;
+    }
+    .information__title {
+      overflow: hidden;
+      font-size: 42px;
+      line-height: 49px;
+    }
+    .information__phone,
+    .information__mail {
+      font-size: 25px;
+      line-height: 85px;
+    }
+    .information__whatsup,
+    .information__telegram {
+      width: 350px;
+      display: flex;
+      justify-content: center;
+
+      &__text {
+        width: 340px;
+        padding: 0;
+        overflow: hidden;
+        a {
+          font-size: 23px;
+        }
+      }
+    }
+  }
+  .footer {
+    margin-left: 0;
+    &__title {
+      font-size: 30px;
+      line-height: 35px;
+      overflow: hidden;
+    }
+  }
+}

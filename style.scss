@@ -14,6 +14,7 @@ $active-btn-color: #fdc302;
   margin: 0;
   padding: 0;
 
+  overflow-x: hidden;
   font-family: $heading;
 }
 
@@ -146,10 +147,10 @@ $active-btn-color: #fdc302;
   }
   &__buttons {
     display: flex;
+    flex-wrap: wrap;
     font-size: 26px;
     line-height: 33px;
     color: #000;
-    display: flex;
     align-items: center;
     text-align: center;
     letter-spacing: 0.02em;
@@ -184,14 +185,13 @@ $active-btn-color: #fdc302;
   }
   .block-cover {
     margin: 65px auto 150px auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 30px;
-    grid-row-gap: 30px;
+    display: flex;
+    align-items: center;
 
     .box {
       height: 470px;
       border: 1px solid #000;
+      margin-right: 30px;
       a {
         text-decoration: none;
         color: #000;
@@ -263,27 +263,44 @@ $active-btn-color: #fdc302;
   }
   .grid_container {
     display: grid;
-    grid-template-columns: 3fr 1fr;
-    grid-template-rows: 300px 300px 300px;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 800px;
+    grid-template-areas:
+      "big small"
+      "big small"
+      "big small";
 
+    .image_1 {
+      grid-area: big;
+      grid-row: 1/4;
+      background-image: url(/public/photoblock_img_1.png);
+    }
     .image {
       background-size: cover;
       background-repeat: no-repeat;
-      &_1 {
-        grid-row: 1/4;
-        background-image: url(/public/photoblock_img_1.png);
-      }
-      &_2 {
+    }
+    .small_images {
+      grid-area: small;
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: auto;
+      .image_2 {
         background-image: url(/public/photoblock_img_2.png);
-        margin-right: 20px;
       }
-      &_3 {
+      .image_3 {
         background-image: url(/public/photoblock_img_3.png);
-        margin-right: 20px;
       }
-      &_4 {
+      .image_4 {
         background-image: url(/public/photoblock_img_4.png);
-        margin-right: 20px;
+      }
+      .image_2,
+      .image_3,
+      .image_4 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 100%;
+        max-height: auto;
       }
     }
   }
@@ -301,9 +318,6 @@ $active-btn-color: #fdc302;
     left: 0;
     width: 381px;
     height: 381px;
-    @media screen and (width<950px) {
-      display: none;
-    }
   }
   &__picture2 {
     background-image: url(./public/FAQ-2.png);
@@ -337,6 +351,7 @@ $active-btn-color: #fdc302;
 
     .toggle-header {
       font-weight: 600;
+      overflow: hidden;
       font-size: 30px;
       line-height: 85px;
       border: 3px solid #aeaeae;
@@ -373,6 +388,7 @@ $active-btn-color: #fdc302;
 
 .contacts {
   display: flex;
+
   margin-top: 115px;
   padding-left: 130px;
 
@@ -396,6 +412,7 @@ $active-btn-color: #fdc302;
     .information__telegram {
       &__text {
         background-color: #fff;
+        overflow: hidden;
 
         width: 420px;
         height: 60px;
