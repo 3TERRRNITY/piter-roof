@@ -1,4 +1,4 @@
-@media screen and (max-width: 1025px) {
+@media screen and (max-width: 1100px) {
   .navbar {
     background-color: rgba(0, 0, 0, 0);
     color: white;
@@ -35,10 +35,9 @@
   .hero {
     background-image: url("./public/hero_img_1.png");
     background-size: cover;
-
-    width: 100vw;
+    width: 100%;
     top: 0;
-    height: 670px;
+    height: 100vh;
     color: white;
     overflow: hidden;
 
@@ -167,9 +166,7 @@
   }
   .contacts {
     padding: 0;
-    .images {
-      display: none;
-    }
+
     .information__title {
       overflow: hidden;
       font-size: 42px;
@@ -202,6 +199,35 @@
       font-size: 30px;
       line-height: 35px;
       overflow: hidden;
+    }
+  }
+}
+
+@media screen and (max-width: 1350px) {
+  .excursions {
+    &__title {
+      margin-bottom: 20px;
+      font-size: 42px;
+      line-height: 49px;
+      overflow: hidden;
+    }
+    &__buttons {
+      width: 100vw;
+      font-size: 24px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .block-cover {
+      flex-wrap: wrap;
+      margin-top: 45px;
+      margin-bottom: 120px;
+    }
+  }
+  .contacts {
+    display: flex;
+    justify-content: center;
+    .images {
+      display: none;
     }
   }
 }
